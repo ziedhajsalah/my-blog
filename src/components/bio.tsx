@@ -54,11 +54,10 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Scribbles by <strong>{author}</strong>, a software developer at Xtech.guru from Tunisia
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+          Follow me on Twitter
         </a>
       </p>
     </div>
