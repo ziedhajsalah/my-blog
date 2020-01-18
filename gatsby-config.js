@@ -8,6 +8,7 @@ module.exports = {
       twitter: "ziedhajsalah",
     },
   },
+  pathPrefix: "/my-blog",
   plugins: [
     "gatsby-plugin-typescript",
     {
