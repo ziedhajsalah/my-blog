@@ -12,5 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: install dependencies
+      run: yarn
     - name: build and deploy
       run: yarn deploy
