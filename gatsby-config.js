@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Drafts",
+    title: "Scribbles",
     author: "Zied Haj Salah",
     description: "My personal blog",
-      siteUrl: "https://ziedhajsalah.github.io/my-blog",
+    siteUrl: "https://ziedhajsalah.github.io/my-blog",
     social: {
       twitter: "ziedhajsalah",
     },
