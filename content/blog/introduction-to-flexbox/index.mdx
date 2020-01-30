@@ -6,59 +6,552 @@ description: "An introduction to flexbox for xtech training"
 
 ## Introduction
 
-    The flex box model is composed of two type of elements: The flex container (or the parent element) and the flex items (or children elements).
-    An element becomes a flex container by adding a css property `display: flex` to it.
+The flex box model is composed of two type of elements: The flex container (or the parent element) and the flex items (or children elements).
+An element becomes a flex container by adding a css property `display: flex` to it.
 
 ## Parent Element
 
-    The flex container properties:
+The flex container properties:
 
-        - `flex-direction`: defines in which direction the container wants to stack the flex items.
-            - `row` (default)
-            - `column`
-            - `row-reverse`
-            - `column-reverse`
-        - `flex-wrap`: specifies whether the flex items should wrap or not.
-            - `no-wrap` (default)
-            - `wrap` elements will wrap if needed
-            - `wrap-reverse` elements will wrap if needed in reverse order.
-        - `flex-flow`: shorthand property for setting both the `flex-direction` and `flex-wrap` properties.
-        - `justify-content`: used to align the flex items horizontally.
-            - `flex-start` (default)
-            - `flex-end`
-            - `center`
-            - `space-around`
-            - `space-between`
-        - `align-items`: used to align the flex items vertically.
-            - `stretch` (default): fill the container.
-            - `flex-start`: top of the container.
-            - `flex-en`: bottom of the container.
-            - `center`: middle of the container.
-            - `baseline`: baselines of the items.
-        - `align-content`: used to align the flex lines.
-            - `stretch`: take the remaining space 
-            - `space-between`: have equal spaces between lines.
-            - `space-around`: have spaces before/between/after line.
-            - `center`: lines in the middle of the container.
-            - `flex-start`: top of the container 
-            - `flex-end`: bottom of the container
+- `flex-direction`: defines in which direction the container wants to stack the flex items.
+
+  - `row` (default)
+
+    <div style="display: flex; width: 240px; background: green; color: white;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `column`
+
+    <div style="display: flex; width: 240px; background: green; color: white; flex-direction: column;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `row-reverse`
+
+    <div style="display: flex; width: 240px; background: green; color: white; flex-direction: row-reverse;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `column-reverse`
+
+    <div style="display: flex; width: 240px; background: green; color: white; flex-direction: column-reverse;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+- `flex-wrap`: specifies whether the flex items should wrap or not.
+
+  - `no-wrap` (default)
+
+    <div style="display: flex; width: 240px; background: green; color: white;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `wrap` elements will wrap if needed
+
+    <div style="display: flex; width: 240px; background: green; color: white; flex-wrap: wrap;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `wrap-reverse` elements will wrap if needed in reverse order.
+
+    <div style="display: flex; width: 240px; background: green; color: white; flex-wrap: wrap-reverse;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+    </div>
+
+- `flex-flow`: shorthand property for setting both the `flex-direction` and `flex-wrap` properties.
+- `justify-content`: used to align the flex items horizontally.
+
+  - `flex-start` (default)
+  - `flex-end`
+
+    <div style="display: flex; width: 240px; background: green; color: white; justify-content: flex-end;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `center`
+
+    <div style="display: flex; width: 240px; background: green; color: white; justify-content: center;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `space-around`
+
+    <div style="display: flex; width: 240px; background: green; color: white; justify-content: space-around;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `space-between`
+
+    <div style="display: flex; width: 240px; background: green; color: white; justify-content: space-between;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+- `align-items`: used to align the flex items vertically.
+
+  - `stretch` (default): fill the container.
+
+    <div style="display: flex; width: 240px; background: green; color: white; height: 120px;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `flex-start`: top of the container.
+
+    <div style="display: flex; width: 240px; background: green; color: white; height: 120px; align-items: flex-start;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `flex-end`: bottom of the container.
+
+    <div style="display: flex; width: 240px; background: green; color: white; height: 120px; align-items: flex-end;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `center`: middle of the container.
+
+    <div style="display: flex; width: 240px; background: green; color: white; height: 120px; align-items: center;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        3
+      </div>
+    </div>
+
+  - `baseline`: baselines of the items.
+
+    <div style="display: flex; width: 240px; background: green; color: white; height: 120px; align-items: baseline;">
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center; font-size: 24px;">
+        1
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center; font-size: 8px;">
+        2
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center; font-size: 36px;">
+        3
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center; font-size: 42px;">
+        4
+      </div>
+      <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+        5
+      </div>
+    </div>
+
+- `align-content`: used to align the flex lines.
+
+  - `stretch`: take the remaining space (default)
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `space-between`: have equal spaces between lines.
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap; align-content: space-between;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `space-around`: have spaces before/between/after line.
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap; align-content: space-around;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `center`: lines in the middle of the container.
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap; align-content: center;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `flex-start`: top of the container
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap; align-content: flex-start;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
+
+  - `flex-end`: bottom of the container
+
+    <div style="display: flex; width: 240px; height: 420px; background: green; color: white; flex-wrap: wrap; align-content: flex-end;">
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        1
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        2
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        3
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        4
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        5
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        6
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        7
+      </div>
+      <div style="background: blue; width: 48px; margin: 4px; text-align: center;">
+        8
+      </div>
+    </div>
 
 ## Child elements
 
-    The flex items properties:
-        - `order`: specifies the order of the element. Default value is 0, means the elements are ordered like their order in the DOM.
-        - `flex-grow`: specifies how much an item will grow relative to the other items. Default value is 0.
-        - `flex-shrink`: specifies how much an item will shrink relative to the other items. Default value is 1. Value 0 means don’t shrink.
-        - `flex-basis`: specifies the length (width or height following flex direction) of the item.
-        - `flex`: shorthand for `flex-grow flex-shrink flex-basis`.
-        - `align-self`: overrides the alignment specified in the container for `align-items` for the corresponding item
+The flex items properties:
 
-## Space Management
+- `order`: specifies the order of the element. Default value is 0, means the elements are ordered like their order in the DOM.
 
-## Alignment
+  <div style="display: flex; width: 240px; background: green; color: white;">
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; order: 1;">
+      1
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      2
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      3
+    </div>
+  </div>
 
-## Ordering
+- `flex-grow`: specifies how much an item will grow relative to the other items. Default value is 0.
 
-## Use Cases
+  <div style="display: flex; width: 240px; background: green; color: white;">
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      1
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; flex-grow: 1;">
+      2
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      3
+    </div>
+  </div>
 
-### Responsive design
+- `flex-shrink`: specifies how much an item will shrink relative to the other items. Default value is 1. Value 0 means don’t shrink.
+
+  <div style="display: flex; width: 240px; background: green; color: white;">
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      1
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; flex-shrink: 2;">
+      2
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      3
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      4
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      5
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      6
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      7
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      8
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; flex-shrink: 0;">
+      9
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; flex-shrink: 0;">
+      10
+    </div>
+  </div>
+
+- `flex-basis`: specifies the length (width or height following flex direction) of the item.
+
+  <div style="display: flex; width: 240px; background: green; color: white;">
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      1
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center; flex-basis: 120px;">
+      2
+    </div>
+    <div style="background: blue; width: 24px; margin: 4px; text-align: center;">
+      3
+    </div>
+  </div>
+
+* `flex`: shorthand for `flex-grow flex-shrink flex-basis`.
+
+* `align-self`: overrides the alignment specified in the container for `align-items` for the corresponding item
